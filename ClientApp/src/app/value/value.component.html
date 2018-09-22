@@ -1,0 +1,42 @@
+<!-- <input #box (keyup)="onEnter(box.value)"> -->
+
+<form class="form-inline my-2 my-lg-0 justify-content-center ">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" #box (keyup)="onEnter(box.value)">
+</form>
+<p>{{value}}</p>
+
+
+<div *ngIf="value">
+  <div class="card mx-auto justify-content-center" style="width: 18rem;">
+    <img class="card-img-top img-thumbnail imageHeight" src="{{poster_path}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{original_title}}</h5>
+      <!-- 
+      <p class="card-text">{{overview}}</p> -->
+      <h5 class="card-text">Price: ${{popularity}}</h5>
+      <h5 class="card-text">Release Date: {{release_date}}</h5>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-12" style="height:80px;"></div>
+
+<div *ngIf="otherMovie">
+  <h3> Popular Movies </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col" *ngFor="let list of showOtherMovie">
+        <div class="card-group ">
+          <div class="card">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{list.poster_path}}" alt="Card image cap">
+            <div class="card-body">
+           <!--   <h5 class="card-title">{{list.original_title}}</h5> -->
+               <p class="card-text">Language: {{list.original_language}}</p>
+              <p class="card-text">Price: ${{list.popularity}}</p>
+              <p class="card-text"><small class="text-muted">Release Date: {{list.release_date}}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
