@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ClientApp",
+    "\\ClientApp\\src",
+    "\\ClientApp\\src\\app",
+    "\\ClientApp\\src\\app\\log",
+    "\\ClientApp\\src\\assets",
+    "\\Properties"
+  ],
+  "SelectedNode": "\\ClientApp\\src\\app\\app.component.html",
+  "PreviewInSolutionExplorer": false
+}
